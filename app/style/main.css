@@ -1,0 +1,62 @@
+html, body, .container-fluid {
+	height: 70%;
+	width: 100%;
+	background-color: black;
+}
+.img-row {
+	/*height: 75%;
+	display: block;*/
+    height: 500px;
+}
+.img-div {
+	height: 100%;
+	width: 100%;
+  text-align: center;
+}
+.img-thumb {
+	padding-top: 10px;
+	max-width: 100%;
+	max-height: 100%;
+}
+.control-row {
+	height: 10%;
+}
+.control-buttons {
+	margin: auto;
+	padding-top: 5px;
+}
+
+.height100 {
+	height: 100%;
+	display: block;
+}
+
+.width100 {
+	width: 100%;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#directoryStats {
+	color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#button-div {
+    padding-top: 200px;
+}
+
+#vintagebtn, #noisebtn, #tiltshiftbtn, #oldpaperbtn, #sunrisebtn, #lomobtn, #embossbtn, #radialblurbtn, #orangepeelbtn, #oldbootbtn, #edgeenhancebtn {
+  margin: 0px 0px 4px 0px;
+}
+
+input[type="range"] {
+  margin: 0 0 10px 0;
+}
+
+label {
+  color: white;
+}

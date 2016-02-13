@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Electron Photo Editor</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 img-row">
+                <div class="img-div">
+                    <!-- <img id="currentImage" class="img-thumb center" /> -->
+                    <canvas id="currentImage" class="img-thumb center"></canvas>
+                    <div id="button-div">
+                        <button id="open-file" type="button" class="btn btn-primary center-block btn-lg btn-block">Open</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" class="control-row" id="control-panel">
+            <div class="col-lg-6 height100 control-buttons text-center">
+                <div>
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-primary" id="rotate-left"><i class="fa fa-undo fa-1x"></i></button>
+                        <button type="button" class="btn btn-success" id="previous"><i class="fa fa-arrow-circle-left fa-1x"></i></button>
+                        <label id="directoryStats"></label>
+                        <button type="button" class="btn btn-success" id="next"><i class="fa fa-arrow-circle-right fa-1x"></i></button>
+                        <button type="button" class="btn btn-primary" id="rotate-right"><i class="fa fa-repeat fa-1x"></i></button>
+                        <button type="button" class="btn btn-danger" id="savebtn"><i class="fa fa-floppy-o fa-1x"></i></button>
+                    </div>
+                    <div style="text-align: center; margin-top: 4px;">
+                        <button type="button" class="btn btn-primary btn-sm" id="vintagebtn">Vintage</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="noisebtn">Noise</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="edgeenhancebtn">Edge Enhance</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="sunrisebtn">Sun Rise</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="lomobtn">Lomo</button>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-primary btn-sm" id="embossbtn">Emboss</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="radialblurbtn">Radial Blur</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="orangepeelbtn">Orange Peel</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="oldbootbtn">Old Boot</button>
+                    </div>
+                    <div style="text-align: center;">
+                        <form>
+                            Resize Image:
+                            <input type="text" id="imgheight" maxlength="5" size="5" placeholder="height">
+                            <input type="text" id="imgwidth" maxlength="5" size="5" placeholder="width">
+                            <button type="button" class="btn btn-primary btn-sm" id="resizebtn">Resize</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-md-4 col-lg-4 col-xs-4" style="text-align: center;">
+                    <label for="hue">Hue</label>
+                    <br>
+                    <input id="hue" name="hue" type="range" min="0" max="300" value="0">
+                    <br>
+                    <label for="contrast">Contrast</label>
+                    <br>
+                    <input id="contrast" name="contrast" type="range" min="-80" max="80" value="0">
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-4" style="text-align: center;">
+                    <label for="vibrance">Vibrance</label>
+                    <br>
+                    <input id="vibrance" name="vibrance" type="range" min="0" max="400" value="0">
+                    <br>
+                    <label for="sepia">Sepia</label>
+                    <br>
+                    <input id="sepia" name="sepia" type="range" min="0" max="100" value="0">
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-4" style="text-align: center;">
+                    <label for="saturation">Saturation</label>
+                    <br>
+                    <input id="saturation" name="saturation" type="range" min="-50" max="50" value="0">
+                    <br>
+                    <label for="brightness">Brightness</label>
+                    <br>
+                    <input id="brightness" name="brightness" type="range" min="-50" max="50" value="0">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" onload="window.$ = window.jQuery = module.exports;">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/caman.full.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
