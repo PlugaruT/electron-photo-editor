@@ -1,5 +1,5 @@
 #Electron Photo Editor
-Small ptoho editor application using `Electron` and `CamanJS` to manipulate with images. You can load a folder with images, scroll through them and apply different effects.
+Small photo editor application using `Electron` and `CamanJS` to manipulate with images. You can load a folder with images, scroll through them and apply different effects.
 
 ##Running the application
 1. Clone this repo
